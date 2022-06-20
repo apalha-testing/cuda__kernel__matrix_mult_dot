@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --time=00:15:00
+#SBATCH -N 1
+#SBATCH --ntasks-per-node=16
+#SBATCH -C A100
+#SBATCH -p fatq
+
+. /etc/bashrc
+. /etc/profile.d/lmod.sh
+
+module load cuda11.1/toolkit/11.1.1
+
+cd /home/apalha/dev/apalha-testing/cuda/kernel/matrix_mult_dot/src/python
+
+echo "Initializing conda"
+__conda_setup="$('/home/apalha/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/apalha/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/apalha/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/apalha/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+
+echo "Activating conda environment"
+conda activate kernel_tuner
+
+echo ""
+echo ""
+echo ""
+echo "Running kernel tuner in run mode"
+python3 matrix_mult_dot__kernel_run.py

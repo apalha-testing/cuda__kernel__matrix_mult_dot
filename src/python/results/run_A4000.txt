@@ -1,0 +1,91 @@
+Initializing conda
+Activating conda environment
+
+
+
+Running kernel tuner in run mode
+
+---------------------------------------------------------------------
+Running naive matrix multiplication algorithm (double precision)...
+Using: NVIDIA RTX A4000
+   Max error in D:2.8421709430404007e-12
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running naive matrix multiplication algorithm (single precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:0.0014038086
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm (double precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:2.8421709430404007e-12
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm (single precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:0.0014038086
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm optimization 1 (double precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:2.8421709430404007e-12
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm optimization 1 (single precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:0.0014038086
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm optimization 2 (double precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:2.8421709430404007e-12
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm optimization 2 (single precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:0.0014038086
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm rectangle bvanwerkhoven (double precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:2.8421709430404007e-12
+    Min error in D:0.0
+    Sum error in D:9.713118882732997e-07
+Done
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+Running tiling algorithm rectangle bvanwekhoven (single precision)...
+Using: NVIDIA RTX A4000
+    Max error in D:0.0014038086
+    Min error in D:0.0
+    Sum error in D:525.6724
+    All close (atol = 1e-8, rtol = 1e-5):True
+Done
+---------------------------------------------------------------------
+
